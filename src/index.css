@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #45362f;
+  background: #fdf7f0;
+  font-family: Manrope, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(246, 217, 203, 0.46), transparent 28%),
+    radial-gradient(circle at top right, rgba(244, 233, 220, 0.42), transparent 24%),
+    linear-gradient(180deg, #fdf7f0 0%, #fffaf6 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes hero-breath {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.028);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .hero-breath {
+    animation: hero-breath 15s ease-in-out infinite;
+    transform-origin: center center;
+    will-change: transform;
+  }
+}
